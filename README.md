@@ -37,7 +37,7 @@ For this project you will be creating a list/detail view for data retrieved from
 | Tasks                                             | Points |
 | :------------------------------------------------ | -----: |
 | List/Detail Page                                  |      3 |
-| uses useLocation, useParams, and/or useHistory    |      5 |
+| uses useLocation, useParams, and/or useHistory    |      3 |
 | A list of items are shown on page load            |      2 |
 | Detail Page info remains on page refresh          |      2 |
 | Use a Switch Component inside of Router           |      2 |
