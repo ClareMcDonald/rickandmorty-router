@@ -31,7 +31,7 @@ For this project you will be creating a list/detail view for data retrieved from
 - Details page continues to work on page refresh
 - Tests check navigation from list view to details page
     - Test checks for a list of items on the list view, then a single item after navigating to the detail view
-    - 
+
 ### Rubric
 
 | Tasks                                             | Points |
