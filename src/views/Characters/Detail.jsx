@@ -20,6 +20,19 @@ export default function Detail() {
   }, []);
 
   return (
-    <div>Detail</div>
+    <>
+      <div>Character Details</div>
+      <Link path='/'>Back To All Characters</Link>
+      {
+        loading
+          ? <p>Loading Character ^_^</p>
+          : <div>
+            <h3>{character.name}</h3>
+            <p>{character.status}</p>
+            <p>{character.species}</p>
+            <img alt={`Image of ${character.name}`} src={character.image}/>
+          </div>
+      }
+    </>
   )
 }
