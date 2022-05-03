@@ -27,6 +27,7 @@ export default function List() {
         fetchCharacters();
     }, [location.search]);
 
+    console.log(characters)
   return (
     <>
         <h1>Rick and Morty: Character List</h1>
@@ -40,7 +41,18 @@ export default function List() {
                       <option value='alive'>Alive</option>
                       <option value='dead'>Dead</option>
                       <option value='unknown'>Unknown</option>
-                </select>  
+                  </select>  
+                  <div>
+                      {characters.map((character) => (
+                          <div key={character.id}>
+                              <Link to={`/characters/${character.id}`}>
+                              <h4>{character.name}</h4>
+                              </Link>
+                              <p>{character.species}</p>
+                              <p>{character.status}</p>
+                          </div>
+                      ))}
+                  </div>
             </div>
 
         )}      
