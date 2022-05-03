@@ -8,6 +8,10 @@ export default function List() {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const handleStatusChange = (event) => {
+        history.push(`/?status=${event.target.value}`);
+    }
+
     useEffect(() => {
         const fetchCharacters = async () => {
             setLoading(true);
@@ -36,7 +40,7 @@ export default function List() {
             :
             (<div>
                 <label htmlFor='status'>Character Status:</label>    
-                <select name='status' id='status'>
+                <select name='status' id='status' value={status} onChange={handleStatusChange}>
                       <option value='all'>All</option>
                       <option value='alive'>Alive</option>
                       <option value='dead'>Dead</option>
