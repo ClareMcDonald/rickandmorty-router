@@ -22,7 +22,7 @@ export default function Detail() {
   return (
     <>
       <div>Character Details</div>
-      <Link path='/'>Back To All Characters</Link>
+      <Link to='/'>Back To All Characters</Link>
       {
         loading
           ? <p>Loading Character ^_^</p>

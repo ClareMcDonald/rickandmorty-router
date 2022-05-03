@@ -3,10 +3,12 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
-describe(<App />, () => {
-    it('renders a list of characters,' async () => {
+describe('App', () => {
+    it('renders a list of characters', async () => {
         render(
             <MemoryRouter>
+                initialEntries={['/', '/characters/2']}
+                initialIndex={0}
                 <App />
             </MemoryRouter>
         );

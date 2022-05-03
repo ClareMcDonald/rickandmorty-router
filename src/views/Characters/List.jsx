@@ -54,7 +54,7 @@ export default function List() {
                               </Link>
                               <p>{character.species}</p>
                               <p>{character.status}</p>
-                          </div>
+                    </div>
                       ))}
                   </div>
             </div>
