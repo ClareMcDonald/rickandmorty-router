@@ -9,8 +9,23 @@ export default function List() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        const fetchCharacters = async () => {
+            setLoading(true);
 
-    }, []);
+            const statusParam = new URLSearchParams(location.search).get('status');
+
+            const url =
+                statusParam === 'all' || !statusParam
+                    ? 'https://rickandmortyapi.com/api/character'
+                    : `https://rickandmortyapi.com/api/character?status=${statusParam}`;
+            const res = await fetch(url);
+            const { results } = await res.json();
+            setCharacters(results);
+            console.log(characters);
+            setLoading(false);
+        };
+        fetchCharacters();
+    }, [location.search]);
 
   return (
     <>
