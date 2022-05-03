@@ -13,6 +13,22 @@ export default function List() {
     }, []);
 
   return (
-    <div>List</div>
+    <>
+        <h1>Rick and Morty: Character List</h1>
+        {loading
+            ? (<p>Loading Characters ^_^</p>)
+            :
+            (<div>
+                <label htmlFor='status'>Character Status:</label>    
+                <select name='status' id='status'>
+                      <option value='all'>All</option>
+                      <option value='alive'>Alive</option>
+                      <option value='dead'>Dead</option>
+                      <option value='unknown'>Unknown</option>
+                </select>  
+            </div>
+
+        )}      
+    </>
   )
 }
